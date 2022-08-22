@@ -1,3 +1,10 @@
 <resources>
     <string name="app_name">CourseLibrary</string>
+    <string name="message_one">Это кнопка 1</string>
+    <string name="text_button_one">Кнопка 1</string>
+    <string name="message_second">Это кнопка 2</string>
+    <string name="text_button_second">Кнопка 2</string>
+    <string name="message_third">Это кнопка 3</string>
+    <string name="text_button_third">Кнопка 3</string>
+
 </resources>
