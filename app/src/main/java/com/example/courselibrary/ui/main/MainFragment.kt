@@ -1,12 +1,10 @@
 package com.example.courselibrary.ui.main
 
-import androidx.lifecycle.ViewModelProvider
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Toast
+import androidx.fragment.app.Fragment
 import com.example.courselibrary.R
 import com.example.courselibrary.databinding.FragmentMainBinding
 
@@ -24,7 +22,7 @@ class MainFragment : Fragment(), MainView {
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View {
         _binding = FragmentMainBinding.inflate(inflater)
         return binding.root
     }
@@ -33,24 +31,29 @@ class MainFragment : Fragment(), MainView {
         super.onViewCreated(view, savedInstanceState)
 
         initPresenter()
+        buttonsClick()
 
+    }
+
+    private fun buttonsClick(){
         with(binding){
             buttonBoomOne.setOnClickListener {
-                presenter.onCounterClick(R.id.buttonBoomOne)
+                presenter.onCounterClick(0)
             }
             buttonBoomSecond.setOnClickListener {
-                presenter.onCounterClick(R.id.buttonBoomSecond)
+                presenter.onCounterClick(1)
             }
             buttonBoomThird.setOnClickListener {
-                presenter.onCounterClick(R.id.buttonBoomThird)
+                presenter.onCounterClick(2)
             }
         }
-
     }
 
         private fun initPresenter(){
             presenter  = CountersPresenter(this)
         }
+
+
 
     override fun setText(counter: String, position: Int) {
         with(binding){

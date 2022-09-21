@@ -3,7 +3,7 @@ package com.example.courselibrary.ui.main
 
 class CountersModel  {
 
-    private val counters = mutableListOf(0, 0, 0)
+    private val counters = mutableListOf(0, 0 ,0 )
 
 
     fun getCurrent(position: Int): Int{
